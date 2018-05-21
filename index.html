@@ -13,16 +13,45 @@
     <h1 class="text-center">Welcome to API World!</h1>
     <p class="text-center">Connecting to third-party APIs</p>
 
-    <div class="google-maps">
-      <h3 id="map-heading">Google Maps</h3>
-      <div id="map"></div>
-    </div>
+    <div class="pac-card" id="pac-card">
+          <div>
+            <div id="title">
+              Autocomplete search
+            </div>
+            <div id="type-selector" class="pac-controls">
+              <input type="radio" name="type" id="changetype-all" checked="checked">
+              <label for="changetype-all">All</label>
 
+              <input type="radio" name="type" id="changetype-establishment">
+              <label for="changetype-establishment">Establishments</label>
+
+              <input type="radio" name="type" id="changetype-address">
+              <label for="changetype-address">Addresses</label>
+
+              <input type="radio" name="type" id="changetype-geocode">
+              <label for="changetype-geocode">Geocodes</label>
+            </div>
+            <div id="strict-bounds-selector" class="pac-controls">
+              <input type="checkbox" id="use-strict-bounds" value="">
+              <label for="use-strict-bounds">Strict Bounds</label>
+            </div>
+          </div>
+          <div id="pac-container">
+            <input id="pac-input" type="text"
+                placeholder="Enter a location">
+          </div>
+        </div>
+        <div id="map"></div>
+        <div id="infowindow-content">
+          <img src="" width="16" height="16" id="place-icon">
+          <span id="place-name"  class="title"></span><br>
+          <span id="place-address"></span>
+        </div>
 
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0PQfyV3FbR5GUGm2q8dZCtmNh2i_MBAc&callback=initMap"
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0PQfyV3FbR5GUGm2q8dZCtmNh2i_MBAc&callback=initMap&libraries=places"
   type="text/javascript"></script>
 
   <script src="index.js"></script>
