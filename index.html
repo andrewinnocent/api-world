@@ -6,12 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="index.css">
   <title>API World!</title>
 </head>
   <body>
-    <h1>Welcome to API World!</h1>
-    <h3>Connecting to third-party APIs</h3>
+    <h1 class="text-center">Welcome to API World!</h1>
+    <p class="text-center">Connecting to third-party APIs</p>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+    <div class="google-maps">
+      <h3 id="map-heading">Google Maps</h3>
+      <div id="map"></div>
+    </div>
+
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0PQfyV3FbR5GUGm2q8dZCtmNh2i_MBAc&callback=initMap"
+  type="text/javascript"></script>
+
+  <script src="index.js"></script>
   </body>
 </html>
